@@ -33,13 +33,13 @@ body {
 
 
 h1{
-    font-size: 4rem;
+    font-size: 4vw;
     margin: 0;
     padding: 0;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2vw;
     margin: 20;
     padding: 0;
 }
@@ -51,10 +51,10 @@ h2{
 .btn{
     font-family: Roboto, sans-serif;
     font-weight: 100;
-    font-size: 18px;
+    font-size: 1.5vw;
     color: #fff;
     background-color: #0066cc00;
-    padding: 10px 30px;
+    padding: 1vw 3vw;
     border: solid #ffffff 2px;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
     border-radius: 50px;
@@ -95,7 +95,7 @@ h2{
       }
       
       .animation div:first-child {
-        animation: text-animation 8s infinite;
+        animation: text-animation 14s infinite;
       }
       
       .first div {
