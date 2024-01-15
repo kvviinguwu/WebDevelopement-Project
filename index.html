@@ -1,13 +1,34 @@
-<html lang="pl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WardenOwls</title>
-    <script src="https://unpkg.com/vue@next"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="glitch.css">
+    <script type='text/javascript' src="script.js"></script>
 </head>
-
 <body>
-    <h1> Hello World :></h1>
-</body>
 
+<div class="container">
+    <!--Section with centered text and a button to scroll down to the next section, called "about"-->
+    <div class="intro">
+        <h1>Hi, I'm <span class="name glitch layers" data-text="Łukasz Kanigowski">Łukasz Kanigowski</span></h1>
+        <h2>Junior Cybersecurity Specialist<h2>
+        <a class="btn" data-section="about">O mnie</a>
+    </div>
+    <!-- Div called "about" that is accessed by smooth scrolling-->
+    <div class="about" id="about">
+        <section class="animation">
+            <div class="first"><div>Mam 24 lata, w IT siedzę od ponad ośmiu.</div></div>
+            <div class="second"><div>Uwielbiam sieci i cyberbezpieczeństwo.</div></div>
+            <div class="third"><div>W wolnych chwilach psuję i naprawiam elektronike. </div></div>
+        </section>
+        <a class="btn" data-section="skills">Umiejętności</a>
+
+    </div>
+
+    <div class="skills" id="skills">
+        chuj
+    </div>
+</body>
 </html>
