@@ -43,13 +43,63 @@ h1{
     padding: 0;
 }
 
-h2, h3{
-    font-size: 2vw;
-    margin: 0;
-    padding: 0;
-    max-width: 70%;
-    text-align: center;
+/* Text scaling for h1 */
+@media (min-width: 1281px) {
+    h1{
+        font-size: 4vw;
+        margin: 0;
+        padding: 0;
+    }
+  }
+      
+
+@media (min-width: 481px) and (max-width: 767px) {
+    h1{
+        font-size: 7vw;
+        margin: 0;
+        padding: 0;
+    }
 }
+/*------------------------------------*/
+
+
+/* Text scaling for headers h2 and h3 */
+@media (min-width: 1281px) {
+    h2, h3{
+        font-size: 2vw;
+        margin: 0;
+        padding: 0;
+        max-width: 70%;
+        text-align: center;
+    }
+  }
+      
+
+@media (min-width: 481px) and (max-width: 767px) {
+    h2, h3{
+        font-size: 5vw;
+        margin: 0;
+        padding: 0;
+        max-width: 70%;
+        text-align: center;
+    }
+}
+/*------------------------------------*/
+
+/* Text scaling for button text */
+@media (min-width: 1281px) {
+    .btn{
+        font-size: 1vw;
+    }
+  }
+      
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .btn{
+        font-size: 3vw;
+    }
+}
+/*------------------------------------*/
 
 .name{
     color: pink;
@@ -58,7 +108,6 @@ h2, h3{
 .btn{
     font-family: Roboto, sans-serif;
     font-weight: 100;
-    font-size: 1vw;
     color: #fff;
     background-color: #0066cc00;
     padding: 1vw 3vw;
