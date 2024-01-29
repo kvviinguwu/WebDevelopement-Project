@@ -129,20 +129,35 @@
       <input type="text" name="email" placeholder="E-Mail" required>
       <input type="text" name="phone" placeholder="Phone" required>
       <input type="text" name="brief" placeholder="Project brief" required>
-      <br>
-      <div style="padding-bottom: 40px;"></div> <!-- Chyba najgłupsza część tego kodu XDDDD-->
-
-      <input type="submit" id="sendForm">
+       <br>
+      <input type="submit" value="Send Form" id="sendFormButton">
   </form>
 
   <script defer>
       document.addEventListener("DOMContentLoaded", function () {
           const contactForm = document.getElementById('contactForm');
-          const sendFormButton = document.getElementById('sendForm');
+          const sendFormButton = document.getElementById('sendFormButton');
 
-          sendFormButton.addEventListener('click', function () {
-              // Submit the form
-              contactForm.submit();
+          contactForm.addEventListener('submit', function (event) {
+              // Prevent the default form submission behavior
+              event.preventDefault();
+
+              // Get form data
+              const formData = new FormData(contactForm);
+
+              // Send form data using fetch
+              fetch(contactForm.getAttribute('action'), {
+                  method: 'POST',
+                  body: formData
+              })
+              .then(response => response.json())
+              .then(data => {
+                  // Handle the response, you can display a success message or handle errors
+                  console.log(data);
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+              });
           });
       });
   </script>
