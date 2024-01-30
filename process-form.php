@@ -11,25 +11,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $brief = $_POST['brief'];
 
-    // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.mailgun.org'; // Replace with your SMTP server
+        $mail->Host       = 'smtp.mailgun.org'; 
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'xxx'; // Replace with your SMTP username
-        $mail->Password   = 'xxx'; // Replace with your SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-        $mail->Port       = 587; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Username   = 'xxx'; 
+        $mail->Password   = 'xxx'; 
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+        $mail->Port       = 587; 
 
-        // Recipients
         $mail->setFrom($email, $fullname);
-        $mail->addAddress('xxx'); // Replace with the recipient's email address
+        $mail->addAddress('xxx'); 
 
-        // Content
-        $mail->isHTML(false); // Set email format to plain text
+        $mail->isHTML(false); 
         $mail->Subject = 'New Form Submission';
         $mail->Body    = "Name: $fullname\nEmail: $email\nPhone: $phone\nProject Brief: $brief";
 

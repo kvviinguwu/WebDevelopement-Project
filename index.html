@@ -14,7 +14,6 @@
 <body>
 
 <div class="container">
-    <!--Section with centered text and a button to scroll down to the next section, called "about"-->
     
     
     <div class="intro">
@@ -22,7 +21,6 @@
         <h2 style="padding:20px;">Junior Cybersecurity Specialist<h2>
         <a class="btn" data-section="about">About me</a>
     </div>
-    <!-- Div called "about" that is accessed by smooth scrolling-->
     
     
     <div class="about" id="about">
@@ -149,20 +147,16 @@
           const sendFormButton = document.getElementById('sendFormButton');
 
           contactForm.addEventListener('submit', function (event) {
-              // Prevent the default form submission behavior
               event.preventDefault();
 
-              // Get form data
               const formData = new FormData(contactForm);
 
-              // Send form data using fetch
               fetch(contactForm.getAttribute('action'), {
                   method: 'POST',
                   body: formData
               })
               .then(response => response.json())
               .then(data => {
-                  // Handle the response, you can display a success message or handle errors
                   console.log(data);
               })
               .catch(error => {
